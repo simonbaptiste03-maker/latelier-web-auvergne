@@ -32,7 +32,7 @@ Site **100 % statique** — aucune dépendance, aucun build, aucune base de donn
 ## 💼 Offre commerciale
 
 ### Étape 1 · Obligatoire
-**Création du site** — `350 € HT`
+**Création du site** — `300 € HT`
 - Site vitrine 3 pages sur-mesure
 - Design responsive (mobile, tablette, PC)
 - Nom de domaine .fr (1ʳᵉ année incluse)
