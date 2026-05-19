@@ -1,0 +1,22 @@
+# Vercel (contient des tokens secrets, ne JAMAIS commit)
+.vercel/
+
+# macOS
+.DS_Store
+._*
+
+# Editeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs et temp
+*.log
+*.tmp
+node_modules/
+
+# Variables d'environnement
+.env
+.env.local
+.env*.local

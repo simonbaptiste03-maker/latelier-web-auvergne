@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mentions légales · L'Atelier Web Auvergne</title>
+<meta name="description" content="Mentions légales du site latelier-web-auvergne.vercel.app · L'Atelier Web Auvergne, Baptiste Simon, Clermont-Ferrand.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://latelier-web-auvergne.vercel.app/mentions-legales">
+
+<!-- ====== FAVICON SVG (volcan d'Auvergne) ====== -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 32'><g fill='none' stroke='%231B3A5C' stroke-width='2.2' stroke-linejoin='round' stroke-linecap='round'><path d='M 2 28 L 10 18 L 14 22 L 20 13 L 26 6 L 32 13 L 36 18 L 40 14 L 46 28'/><path d='M 23 7 Q 26 9 29 7'/></g><circle cx='26' cy='3' r='1.8' fill='%23C9A04B'/></svg>">
+
+<!-- ====== FONTS ====== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #1A1A2E;
+    --ink-soft: #5A5A6B;
+    --ink-mute: #8A8A98;
+    --line: #E5E2D9;
+    --bg: #FAF8F4;
+    --surface: #FFFFFF;
+    --navy: #1B3A5C;
+    --navy-dark: #14304D;
+    --terra: #B0432A;
+    --gold: #C9A04B;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "ss01";
+  }
+
+  h1, h2, h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+  }
+
+  h1 em, h2 em, h3 em {
+    font-style: italic;
+    font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
+  }
+
+  a { color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--gold); transition: opacity 0.2s; }
+  a:hover { opacity: 0.7; }
+
+  .container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ===== HEADER (identique au site principal) ===== */
+  header.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(250, 248, 244, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+    padding: 18px 0;
+  }
+
+  .nav-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: none;
+  }
+
+  .logo-mark { width: 42px; height: 28px; flex-shrink: 0; }
+
+  .logo-text {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    color: var(--navy);
+    line-height: 1.1;
+  }
+
+  .logo-text .small {
+    display: block;
+    font-family: 'Geist', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    font-weight: 500;
+    margin-top: 2px;
+  }
+
+  nav.menu ul {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  nav.menu ul a {
+    color: var(--ink-soft);
+    border-bottom: none;
+  }
+
+  nav.menu ul a:hover { color: var(--navy); }
+
+  .cta {
+    display: inline-block;
+    padding: 11px 22px;
+    background: var(--navy);
+    color: var(--bg);
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.25s;
+    border: none;
+    text-align: center;
+  }
+
+  .cta:hover { background: var(--navy-dark); transform: translateY(-1px); }
+
+  /* ===== PAGE ===== */
+  .page-head {
+    padding: 80px 0 50px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .page-head .container { max-width: 820px; }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--terra);
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+
+  .page-head h1 {
+    font-size: 56px;
+    line-height: 1.05;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+
+  .page-head h1 em {
+    font-style: italic;
+    color: var(--navy);
+  }
+
+  .page-head .updated {
+    font-size: 13px;
+    color: var(--ink-mute);
+    font-style: italic;
+  }
+
+  .legal {
+    padding: 60px 0 80px;
+  }
+
+  .legal .container {
+    max-width: 820px;
+  }
+
+  .legal h2 {
+    font-size: 26px;
+    margin: 50px 0 14px;
+    color: var(--navy);
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+  }
+
+  .legal h2:first-of-type { margin-top: 10px; }
+
+  .legal h2 .n {
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    color: var(--gold);
+    font-weight: 600;
+    margin-right: 12px;
+    letter-spacing: 2px;
+  }
+
+  .legal h3 {
+    font-family: 'Geist', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 24px 0 8px;
+  }
+
+  .legal p, .legal li {
+    color: var(--ink-soft);
+    line-height: 1.8;
+    margin-bottom: 14px;
+  }
+
+  .legal ul, .legal ol {
+    padding-left: 26px;
+    margin-bottom: 18px;
+  }
+
+  .legal ul li, .legal ol li { margin-bottom: 6px; }
+
+  .legal strong { color: var(--ink); font-weight: 600; }
+
+  .info-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 22px 26px;
+    margin: 14px 0 24px;
+  }
+
+  .info-card .kv {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 8px 18px;
+    font-size: 14px;
+  }
+
+  .info-card .kv dt {
+    color: var(--ink-mute);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 11px;
+    padding-top: 3px;
+  }
+
+  .info-card .kv dd {
+    color: var(--ink);
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .info-card .kv dd a { color: var(--navy); }
+
+  .callout {
+    background: #FFF8E1;
+    border-left: 3px solid var(--gold);
+    padding: 14px 18px;
+    border-radius: 0 4px 4px 0;
+    margin: 16px 0;
+    font-size: 14px;
+    color: var(--ink);
+  }
+
+  .callout strong {
+    display: block;
+    color: var(--terra);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+
+  .back-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+    padding: 14px 26px;
+    background: var(--navy);
+    color: var(--bg);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: none;
+    transition: all 0.2s;
+  }
+
+  .back-home:hover { background: var(--navy-dark); opacity: 1; transform: translateY(-1px); }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--navy-dark);
+    color: rgba(250,248,244,0.6);
+    padding: 40px 0;
+    font-size: 13px;
+    border-top: 1px solid rgba(250,248,244,0.08);
+  }
+
+  footer a { color: rgba(250,248,244,0.6); border-bottom: none; }
+  footer a:hover { color: var(--gold); opacity: 1; }
+
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  footer .links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+  }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 768px) {
+    .container { padding: 0 20px; }
+    nav.menu ul { display: none; }
+    .page-head { padding: 50px 0 30px; }
+    .page-head h1 { font-size: 36px; }
+    .legal { padding: 40px 0 60px; }
+    .legal h2 { font-size: 22px; }
+    .info-card .kv { grid-template-columns: 1fr; gap: 2px 0; }
+    .info-card .kv dt { padding-top: 10px; }
+    .info-card .kv dd { padding-bottom: 6px; }
+    .logo-text { font-size: 20px; }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo" aria-label="L'Atelier Web Auvergne · accueil">
+      <svg class="logo-mark" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g fill="none" stroke="#1B3A5C" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round">
+          <path d="M 2 28 L 10 18 L 14 22 L 20 13 L 26 6 L 32 13 L 36 18 L 40 14 L 46 28"/>
+          <path d="M 23 7 Q 26 9 29 7"/>
+        </g>
+        <circle cx="26" cy="3" r="1.6" fill="#C9A04B"/>
+      </svg>
+      <span class="logo-text">
+        L'Atelier Web Auvergne
+        <span class="small">Clermont-Ferrand</span>
+      </span>
+    </a>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#tarifs">Tarifs</a></li>
+        <li><a href="index.html#methode">Méthode</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="index.html#contact" class="cta">Demander un devis</a>
+  </div>
+</header>
+
+<!-- ============ PAGE HEAD ============ -->
+<section class="page-head">
+  <div class="container">
+    <span class="eyebrow">Information légale</span>
+    <h1>Mentions <em>légales</em></h1>
+    <p class="updated">Dernière mise à jour : mai 2026</p>
+  </div>
+</section>
+
+<!-- ============ CONTENT ============ -->
+<section class="legal">
+  <div class="container">
+
+    <p>Conformément aux dispositions de la loi n°2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), il est précisé aux utilisateurs du site <strong>L'Atelier Web Auvergne</strong> l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi.</p>
+
+    <!-- 01 -->
+    <h2><span class="n">01</span> Éditeur du site</h2>
+    <div class="info-card">
+      <dl class="kv">
+        <dt>Raison sociale</dt><dd>L'Atelier Web Auvergne</dd>
+        <dt>Forme juridique</dt><dd>Entreprise individuelle (micro-entreprise) — en cours d'immatriculation</dd>
+        <dt>Représentant légal</dt><dd>Baptiste Simon</dd>
+        <dt>Adresse du siège</dt><dd>7 place Maréchal Foch, 63110 Beaumont, France</dd>
+        <dt>SIRET</dt><dd><em>À renseigner après immatriculation au RNE</em></dd>
+        <dt>Code APE</dt><dd>62.01Z — Programmation informatique</dd>
+        <dt>TVA intracommunautaire</dt><dd>TVA non applicable, article 293 B du Code Général des Impôts (franchise en base)</dd>
+        <dt>Téléphone</dt><dd><a href="tel:+33783878238">07 83 87 82 38</a></dd>
+        <dt>Email</dt><dd><a href="mailto:Simonbaptiste03@gmail.com">Simonbaptiste03@gmail.com</a></dd>
+      </dl>
+    </div>
+
+    <!-- 02 -->
+    <h2><span class="n">02</span> Directeur de la publication</h2>
+    <p>Le directeur de la publication du site est <strong>Baptiste Simon</strong>, en qualité de fondateur et représentant légal de L'Atelier Web Auvergne.</p>
+
+    <!-- 03 -->
+    <h2><span class="n">03</span> Hébergement du site</h2>
+    <div class="info-card">
+      <dl class="kv">
+        <dt>Hébergeur</dt><dd>Vercel Inc.</dd>
+        <dt>Adresse</dt><dd>340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis</dd>
+        <dt>Site web</dt><dd><a href="https://vercel.com" target="_blank" rel="noopener">vercel.com</a></dd>
+      </dl>
+    </div>
+    <p>Le site est servi via le réseau de diffusion de contenu (CDN) global de Vercel, garantissant des temps de chargement inférieurs à la seconde partout dans le monde, et une disponibilité supérieure à 99,99 %.</p>
+
+    <!-- 04 -->
+    <h2><span class="n">04</span> Conception & développement</h2>
+    <p>Le site <strong>latelier-web-auvergne.vercel.app</strong> a été conçu, développé et est maintenu par <strong>Baptiste Simon</strong>, fondateur de L'Atelier Web Auvergne. Toutes les compétences techniques (intégration, design, SEO, déploiement) sont assurées en interne.</p>
+
+    <!-- 05 -->
+    <h2><span class="n">05</span> Propriété intellectuelle</h2>
+    <p>L'ensemble des éléments composant le site — textes, photographies, graphismes, logo, structure, code source, illustrations, ainsi que la marque <strong>« L'Atelier Web Auvergne »</strong> — sont la propriété exclusive de Baptiste Simon ou font l'objet d'une autorisation d'usage.</p>
+    <p>Toute reproduction, représentation, modification, publication ou adaptation, totale ou partielle, par quelque procédé que ce soit, est strictement interdite sans autorisation écrite préalable de l'éditeur, conformément aux articles L.122-4 et L.335-2 et suivants du Code de la propriété intellectuelle.</p>
+    <p>Tout usage non autorisé du site ou de l'un quelconque des éléments qu'il contient sera considéré comme constitutif d'une contrefaçon et poursuivi conformément aux dispositions légales.</p>
+
+    <!-- 06 -->
+    <h2><span class="n">06</span> Données personnelles · RGPD</h2>
+
+    <h3>Responsable du traitement</h3>
+    <p>Baptiste Simon, fondateur de L'Atelier Web Auvergne, est responsable des traitements de données personnelles effectués via ce site.</p>
+
+    <h3>Données collectées</h3>
+    <p>Lorsque vous remplissez le formulaire de contact, les données suivantes sont collectées :</p>
+    <ul>
+      <li>Nom et prénom</li>
+      <li>Nom de votre entreprise (facultatif)</li>
+      <li>Adresse email</li>
+      <li>Numéro de téléphone (facultatif)</li>
+      <li>Type de demande</li>
+      <li>Message libre que vous saisissez</li>
+    </ul>
+
+    <h3>Finalité et base légale</h3>
+    <p>Ces informations sont collectées dans l'unique but de traiter votre demande de devis ou d'information. La base légale du traitement est <strong>votre consentement</strong> (article 6.1.a du RGPD), donné en envoyant le formulaire.</p>
+
+    <h3>Durée de conservation</h3>
+    <p>Les données sont conservées pendant <strong>3 ans</strong> à compter du dernier contact, à des fins de prospection commerciale, conformément aux recommandations de la CNIL.</p>
+
+    <h3>Destinataires</h3>
+    <p>Vos données sont strictement destinées à Baptiste Simon. Elles ne sont en aucun cas vendues, échangées ou transmises à des tiers commerciaux.</p>
+
+    <h3>Vos droits</h3>
+    <p>Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés modifiée, vous disposez à tout moment des droits suivants :</p>
+    <ul>
+      <li><strong>Droit d'accès</strong> aux données vous concernant</li>
+      <li><strong>Droit de rectification</strong> en cas d'inexactitude</li>
+      <li><strong>Droit à l'effacement</strong> (« droit à l'oubli »)</li>
+      <li><strong>Droit à la limitation</strong> du traitement</li>
+      <li><strong>Droit à la portabilité</strong> de vos données</li>
+      <li><strong>Droit d'opposition</strong> au traitement</li>
+      <li><strong>Droit de retirer votre consentement</strong> à tout moment</li>
+    </ul>
+    <p>Pour exercer ces droits, contactez-nous par email à <a href="mailto:Simonbaptiste03@gmail.com">Simonbaptiste03@gmail.com</a>. Une réponse vous sera apportée sous 30 jours maximum.</p>
+
+    <h3>Réclamation</h3>
+    <p>En cas de différend non résolu, vous pouvez introduire une réclamation auprès de la Commission Nationale de l'Informatique et des Libertés (CNIL) : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>.</p>
+
+    <!-- 07 -->
+    <h2><span class="n">07</span> Cookies & traceurs</h2>
+    <p>Le site <strong>latelier-web-auvergne.vercel.app</strong> n'utilise <strong>aucun cookie de traçage publicitaire, d'analytics ou de mesure d'audience</strong>.</p>
+    <p>Seuls des cookies strictement nécessaires au fonctionnement technique du site (sécurité, équilibrage de charge) peuvent être déposés par l'hébergeur Vercel. Ces cookies ne nécessitent pas votre consentement en vertu de l'article 82 de la loi Informatique et Libertés.</p>
+
+    <!-- 08 -->
+    <h2><span class="n">08</span> Conditions générales de vente</h2>
+    <p>Les prestations proposées par L'Atelier Web Auvergne (création de site internet, hébergement, maintenance, référencement, etc.) sont régies par des <strong>Conditions Générales de Vente</strong> spécifiques, communiquées et acceptées par le client lors de la signature du devis.</p>
+    <p>Toute commande implique l'acceptation pleine et entière de ces CGV. Un exemplaire à jour peut être demandé à tout moment à l'adresse <a href="mailto:Simonbaptiste03@gmail.com">Simonbaptiste03@gmail.com</a>.</p>
+
+    <!-- 09 -->
+    <h2><span class="n">09</span> Médiation à la consommation</h2>
+    <p>Conformément à l'article L.612-1 du Code de la consommation, le client consommateur a le droit de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable d'un litige avec L'Atelier Web Auvergne.</p>
+    <div class="info-card">
+      <dl class="kv">
+        <dt>Médiateur désigné</dt><dd>CNPM – Médiation de la Consommation</dd>
+        <dt>Adresse</dt><dd>27 avenue de la Libération, 42400 Saint-Chamond, France</dd>
+        <dt>Site web</dt><dd><a href="https://cnpm-mediation-consommation.eu" target="_blank" rel="noopener">cnpm-mediation-consommation.eu</a></dd>
+      </dl>
+    </div>
+    <p>Le recours au médiateur est gratuit pour le consommateur. Il doit être précédé d'une réclamation écrite directement adressée à L'Atelier Web Auvergne, restée sans réponse dans un délai d'un mois.</p>
+
+    <!-- 10 -->
+    <h2><span class="n">10</span> Liens hypertextes</h2>
+    <p>Le site peut contenir des liens hypertextes vers d'autres sites internet. L'Atelier Web Auvergne n'exerce aucun contrôle sur ces sites tiers et décline toute responsabilité quant à leur contenu, leurs politiques de confidentialité ou leurs pratiques.</p>
+    <p>La création de liens hypertextes vers ce site est autorisée à condition de ne pas porter atteinte à l'image de L'Atelier Web Auvergne et de ne pas créer de confusion sur la source du contenu.</p>
+
+    <!-- 11 -->
+    <h2><span class="n">11</span> Responsabilité</h2>
+    <p>L'éditeur s'efforce de fournir des informations aussi précises et à jour que possible sur le site. Toutefois, il ne peut garantir l'exactitude, l'exhaustivité ou l'actualité des informations diffusées.</p>
+    <p>L'éditeur ne saurait être tenu responsable des dommages directs ou indirects résultant de l'utilisation du site, notamment en cas d'interruption ou de défaillance technique.</p>
+
+    <!-- 12 -->
+    <h2><span class="n">12</span> Droit applicable & juridiction</h2>
+    <p>Les présentes mentions légales sont régies par le <strong>droit français</strong>. En cas de litige, et après tentative de résolution amiable, les tribunaux français seront seuls compétents.</p>
+    <p>Pour les litiges concernant un client consommateur, la juridiction compétente sera celle du lieu de résidence du consommateur. Pour les litiges entre professionnels, la juridiction compétente sera celle du <strong>Tribunal de Commerce de Clermont-Ferrand</strong>.</p>
+
+    <!-- Disclaimer -->
+    <div class="callout">
+      <strong>À propos de cette page</strong>
+      Ces mentions légales sont fournies à titre informatif. Elles seront complétées et mises à jour lors de l'immatriculation officielle de l'entreprise (SIRET, n° d'assurance RC Pro) et de la validation par un avocat ou conseil juridique des Conditions Générales de Vente.
+    </div>
+
+    <a href="index.html" class="back-home">← Retour à l'accueil</a>
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container footer-inner">
+    <div>© 2026 L'Atelier Web Auvergne · Baptiste Simon · Clermont-Ferrand</div>
+    <ul class="links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#tarifs">Tarifs</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="mentions-legales.html">Mentions légales</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
