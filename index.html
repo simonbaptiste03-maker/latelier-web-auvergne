@@ -314,11 +314,12 @@
 
   .hero-visual {
     position: relative;
-    height: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   .hero-card {
-    position: absolute;
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: 8px;
@@ -327,10 +328,10 @@
   }
 
   .hero-card-main {
-    top: 0;
-    right: 0;
-    width: 320px;
+    width: 340px;
     padding: 32px;
+    position: relative;
+    z-index: 1;
   }
 
   .hero-card-main .label {
@@ -388,11 +389,13 @@
   }
 
   .hero-card-side {
-    bottom: 0;
-    left: 0;
-    width: 240px;
+    width: 252px;
+    align-self: flex-start;
+    margin-top: -20px;
     background: var(--navy);
     color: var(--bg);
+    position: relative;
+    z-index: 2;
   }
 
   .hero-card-side .label {
@@ -819,9 +822,10 @@
   /* Step 2 : Subscription grid (3 cards) */
   .sub-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-    margin-top: 26px;
+    margin: 26px auto 0;
+    max-width: 740px;
   }
 
   .sub-card {
@@ -1325,7 +1329,7 @@
     .step-creation .price .amount { font-size: 72px; }
     .hero h1 { font-size: 48px; }
     .section-title { font-size: 36px; }
-    .hero-visual { height: 380px; }
+    .hero-card-main { width: 320px; }
   }
 
   @media (max-width: 640px) {
@@ -1432,7 +1436,7 @@
 <section class="about">
   <div class="container">
     <div class="about-inner">
-      <span class="section-eyebrow">L'atelier</span>
+      <span class="section-eyebrow">Mon objectif</span>
       <h2 class="section-title">Un <em>artisan du web</em>, pas une agence froide.</h2>
 
       <p class="about-quote">L'idée est simple : qu'un boulanger, un plombier ou un coiffeur n'ait plus à signer un chèque de 3 000 € pour avoir une vitrine en ligne digne de ce nom.</p>
@@ -1446,10 +1450,6 @@
         <div class="item">
           <div class="k">Atelier</div>
           <div class="v">Clermont-Ferrand</div>
-        </div>
-        <div class="item">
-          <div class="k">Méthode</div>
-          <div class="v">100 % à distance</div>
         </div>
         <div class="item">
           <div class="k">Délai</div>
@@ -1523,12 +1523,12 @@
 
       <article class="service-card">
         <div class="num">05</div>
-        <h3>Nom de domaine & email pro</h3>
-        <p>Une adresse en .fr à votre nom et une boîte mail pro pour faire bonne impression auprès de vos clients.</p>
+        <h3>Nom de domaine</h3>
+        <p>Une adresse en .fr à votre nom, professionnelle et facile à retenir pour vos clients.</p>
         <ul class="features">
           <li>Réservation du nom de domaine .fr</li>
           <li>Configuration DNS complète</li>
-          <li>Boîte mail professionnelle</li>
+          <li>Renouvellement annuel pris en charge</li>
           <li>Gestion technique transparente</li>
         </ul>
       </article>
@@ -1578,23 +1578,6 @@
     <div class="step-badge optional">Étape 2 · Suivi mensuel · Optionnel</div>
     <div class="sub-grid">
 
-      <!-- SANS SUIVI -->
-      <div class="sub-card noop">
-        <div class="sub-name">Sans suivi</div>
-        <div class="sub-price">
-          <span class="amount">0 €</span>
-          <span class="period">/mois</span>
-        </div>
-        <div class="sub-engage">Vous gérez les renouvellements vous-même</div>
-        <ul class="sub-features">
-          <li>Votre site reste votre propriété</li>
-          <li>Renouvellement domaine + hébergement à votre charge (≈ 85 € HT/an)</li>
-          <li>Aucune intervention de notre part</li>
-          <li>Modifications ponctuelles possibles à 40 € HT/h</li>
-        </ul>
-        <a href="#contact" class="sub-cta">Demander la création seule</a>
-      </div>
-
       <!-- ESSENTIEL -->
       <div class="sub-card">
         <div class="sub-name">Essentiel</div>
@@ -1605,9 +1588,10 @@
         </div>
         <div class="sub-engage">Engagement 12 mois · Tacite reconductible</div>
         <ul class="sub-features">
-          <li>Hébergement & nom de domaine inclus à vie</li>
+          <li>Hébergement & nom de domaine inclus</li>
           <li>Maintenance technique & sécurité</li>
           <li>Sauvegardes automatiques quotidiennes</li>
+          <li>SEO local de base</li>
           <li>1 modification par mois incluse</li>
           <li>Support par email et téléphone</li>
         </ul>
@@ -1627,9 +1611,9 @@
         <ul class="sub-features">
           <li>Tout l'Essentiel, plus :</li>
           <li>Site étendu (jusqu'à 7 pages + galerie)</li>
-          <li>SEO local renforcé</li>
+          <li>SEO renforcé — référencement Google</li>
+          <li>GEO — visibilité sur les IA (ChatGPT, Gemini)</li>
           <li>2 modifications par mois incluses</li>
-          <li>Intégration réseaux sociaux</li>
           <li>Support prioritaire</li>
         </ul>
         <a href="#contact" class="sub-cta">Ajouter Pro</a>
