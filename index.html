@@ -191,13 +191,14 @@
 
   .logo-text .small {
     display: block;
-    font-family: 'Geist', sans-serif;
-    font-size: 10px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--ink-mute);
+    font-family: 'Fraunces', serif;
+    font-size: 11.5px;
+    letter-spacing: 0.2px;
+    text-transform: none;
+    color: var(--terra);
     font-weight: 500;
-    margin-top: 2px;
+    font-style: italic;
+    margin-top: 3px;
   }
 
   nav ul {
@@ -1080,7 +1081,7 @@
   }
 
   .why-list li {
-    padding: 22px 0 22px 56px;
+    padding: 26px 0 26px 82px;
     border-bottom: 1px solid var(--line);
     position: relative;
   }
@@ -1090,12 +1091,20 @@
   .why-list li .num {
     position: absolute;
     left: 0;
-    top: 22px;
+    top: 26px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 1.5px solid var(--terra);
+    background: rgba(176, 67, 42, 0.06);
+    color: var(--terra);
     font-family: 'Fraunces', serif;
-    font-size: 36px;
+    font-size: 20px;
     line-height: 1;
-    color: var(--gold);
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .why-list li h4 {
@@ -1126,12 +1135,19 @@
   }
 
   .process-step .num {
+    width: 66px;
+    height: 66px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: #15314C;
     font-family: 'Fraunces', serif;
-    font-size: 72px;
+    font-size: 27px;
     line-height: 1;
-    color: var(--gold);
-    font-weight: 600;
-    margin-bottom: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .process-step h3 {
@@ -1515,6 +1531,49 @@
     font-weight: 600;
   }
 
+  /* ===== ENCART FICHE DIAGNOSTIC ===== */
+  .diag-callout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    background: rgba(201, 160, 75, 0.1);
+    border: 1px solid rgba(201, 160, 75, 0.38);
+    border-radius: 10px;
+    padding: 24px 30px;
+    margin-bottom: 50px;
+  }
+  .diag-callout-text strong {
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-size: 19px;
+    color: var(--gold);
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  .diag-callout-text {
+    font-size: 13.5px;
+    color: rgba(250, 248, 244, 0.82);
+    line-height: 1.6;
+  }
+  .diag-btn {
+    flex-shrink: 0;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 15px 26px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .diag-btn:hover { background: #B58F3F; transform: translateY(-2px); }
+  @media (max-width: 700px) {
+    .diag-callout { flex-direction: column; align-items: flex-start; gap: 18px; }
+    .diag-btn { width: 100%; text-align: center; }
+  }
+
   /* ===== MOBILE ===== */
   @media (max-width: 960px) {
     nav ul { display: none; }
@@ -1572,7 +1631,7 @@
       </svg>
       <span class="logo-text">
         L'Atelier Web Auvergne
-        <span class="small">Clermont-Ferrand</span>
+        <span class="small">Le web même en Auvergne !</span>
       </span>
     </a>
     <nav>
@@ -2054,21 +2113,6 @@
         <p>Non. Seule la création de votre site (300 € HT) est obligatoire. Le suivi mensuel est totalement optionnel : vous pouvez très bien commander uniquement la création et gérer vous-même le renouvellement de votre domaine et hébergement (~85 €/an).</p>
       </div>
 
-      <div class="faq-item">
-        <h4>Que se passe-t-il après les 12 mois d'engagement ?</h4>
-        <p>Si vous avez pris un abonnement Essentiel ou Pro, il est tacitement reconduit mois par mois. Vous pouvez résilier à tout moment avec un préavis simple d'un mois. Votre nom de domaine et votre site vous appartiennent dès le départ.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4>Je n'ai pas de textes ni de visuels prêts. Que faire ?</h4>
-        <p>La rédaction des textes est proposée en option (200 € pour 5 pages). Pour les visuels, vous nous fournissez vos propres photos ou nous utilisons des banques d'images professionnelles libres de droits.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4>Comment se passent les échanges ? Vous vous déplacez ?</h4>
-        <p>Pour rester efficace et conserver des prix bas, tous les échanges se font à distance : visio, téléphone et email. C'est rapide, pratique et permet d'avancer sans perdre de temps en trajets.</p>
-      </div>
-
     </div>
   </div>
 </section>
@@ -2083,6 +2127,14 @@
     <span class="section-eyebrow">Parlons de votre projet</span>
     <h2 class="section-title">Un projet de <em>site internet</em> en Auvergne ?</h2>
     <p class="section-lead">Audit gratuit, devis sous 48 heures, sans engagement. Choisissez votre canal préféré : appel, email ou formulaire ci-dessous.</p>
+
+    <div class="diag-callout">
+      <div class="diag-callout-text">
+        <strong>Gagnez du temps — préparez votre projet</strong>
+        Téléchargez la fiche diagnostic, remplissez-la tranquillement, puis joignez-la à votre demande. Je comprends votre besoin d'un coup d'œil et vous recevez un devis plus précis, plus vite.
+      </div>
+      <a href="fiche-diagnostic.pdf" class="diag-btn" download>Télécharger la fiche diagnostic</a>
+    </div>
 
     <div class="contact-grid">
 
@@ -2170,7 +2222,7 @@
 <script>
   /* ===== Apparition élégante au défilement ===== */
   (function () {
-    var sel = '.section-eyebrow, .section-title, .section-lead, .about-quote, .about-text, .about-meta, .service-card, .ref-band, .step-badge, .step-creation, .pricing-plus, .sub-card, .pricing-summary, .why-comparison, .why-list li, .process-step, .faq-item, .contact-form, .contact-info';
+    var sel = '.section-eyebrow, .section-title, .section-lead, .diag-callout, .about-quote, .about-text, .about-meta, .service-card, .ref-band, .step-badge, .step-creation, .pricing-plus, .sub-card, .pricing-summary, .why-comparison, .why-list li, .process-step, .faq-item, .contact-form, .contact-info';
     var els = Array.prototype.slice.call(document.querySelectorAll(sel));
     els.forEach(function (el) { el.classList.add('fx-reveal'); });
 
