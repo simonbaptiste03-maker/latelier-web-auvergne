@@ -1410,6 +1410,35 @@
     .hero-text > *, .hero-visual { animation: none !important; }
   }
 
+  /* Case à cocher Diagnostic Web dans le formulaire */
+  .contact-form .form-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    cursor: pointer;
+    font-size: 13px;
+    color: rgba(250, 248, 244, 0.88);
+    line-height: 1.45;
+    margin-top: 4px;
+  }
+  .contact-form .form-check input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    margin: 1px 0 0;
+    padding: 0;
+    border: none;
+    accent-color: var(--gold);
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  .contact-form .form-check strong { color: var(--gold); font-weight: 600; }
+  .contact-form .form-check small {
+    display: block;
+    font-size: 11px;
+    color: rgba(250, 248, 244, 0.5);
+    margin-top: 3px;
+  }
+
   /* ===== MONDES — signature couleur par section ===== */
 
   /* Trait coloré signature devant chaque intitulé */
@@ -2105,7 +2134,7 @@
 
       <div class="faq-item">
         <h4>Le site sera-t-il bien référencé sur Google ?</h4>
-        <p>Oui. Tous nos sites incluent un SEO de base optimisé (balises, structure, vitesse, mobile-first). Le pack Pro ajoute un SEO local poussé pour apparaître dans les recherches "près de chez moi".</p>
+        <p>Oui. Tous nos sites incluent un SEO de base optimisé (balises, structure, vitesse, mobile-first). Le pack Pro ajoute un SEO local poussé <strong>et le GEO</strong> — l'optimisation pour les intelligences artificielles (ChatGPT, Gemini) — pour être visible partout où vos clients vous cherchent.</p>
       </div>
 
       <div class="faq-item">
@@ -2172,6 +2201,10 @@
           <label for="cf-message">Votre projet en quelques mots *</label>
           <textarea id="cf-message" name="message" required placeholder="Activité, ville, ce que vous attendez du site…"></textarea>
         </div>
+        <label class="form-check">
+          <input type="checkbox" id="cf-diag" name="diag">
+          <span>J'ajoute ma fiche <strong>Diagnostic Web</strong> remplie à cette demande<small>Téléchargez-la ci-dessus, remplissez-la, puis joignez le PDF à l'email qui s'ouvrira.</small></span>
+        </label>
         <button type="submit">Envoyer la demande</button>
       </form>
 
@@ -2260,9 +2293,13 @@
       email: f.email.value.trim(),
       phone: f.phone.value.trim(),
       objet: f.objet.value,
-      message: f.message.value.trim()
+      message: f.message.value.trim(),
+      diag: f.diag.checked
     };
     const subject = `Demande de devis — ${d.objet}`;
+    const diagLine = d.diag
+      ? 'Fiche Diagnostic Web : OUI — je la joins (PDF rempli) à cet email.'
+      : 'Fiche Diagnostic Web : non jointe.';
     const body = `Bonjour Baptiste,
 
 Voici ma demande :
@@ -2272,12 +2309,16 @@ Entreprise : ${d.company || '(non renseigné)'}
 Email : ${d.email}
 Téléphone : ${d.phone || '(non renseigné)'}
 Besoin : ${d.objet}
+${diagLine}
 
 Projet :
 ${d.message}
 
 Cordialement,
 ${d.name}`;
+    if (d.diag) {
+      alert("Pensez à joindre votre fiche Diagnostic Web (le PDF rempli) à l'email qui va s'ouvrir.");
+    }
     window.location.href = `mailto:Simonbaptiste03@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
 </script>

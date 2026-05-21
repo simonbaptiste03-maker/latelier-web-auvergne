@@ -18,23 +18,22 @@
   body {
     font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
     color: #1A1A2E;
-    line-height: 1.5;
+    line-height: 1.45;
     background: #e8e8e8;
-    font-size: 12px;
+    font-size: 11.5px;
   }
 
   .page {
     width: 210mm;
     min-height: 297mm;
-    margin: 10mm auto;
+    margin: 9mm auto;
     background: #fff;
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    padding: 16mm 16mm 14mm;
+    padding: 12mm 13mm;
     position: relative;
-    page-break-after: always;
   }
 
-  .page:last-child { page-break-after: auto; }
+  .page + .page { page-break-before: always; }
 
   h1, h2, h3 {
     font-family: 'Fraunces', Georgia, serif;
@@ -47,22 +46,17 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    border-bottom: 3px solid #1B3A5C;
-    padding-bottom: 14px;
-    margin-bottom: 18px;
+    border-bottom: 2.5px solid #1B3A5C;
+    padding-bottom: 9px;
+    margin-bottom: 11px;
   }
 
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .brand svg { width: 46px; height: 31px; flex-shrink: 0; }
+  .brand { display: flex; align-items: center; gap: 11px; }
+  .brand svg { width: 44px; height: 29px; flex-shrink: 0; }
 
   .brand-name {
     font-family: 'Fraunces', serif;
-    font-size: 22px;
+    font-size: 21px;
     font-weight: 700;
     color: #1B3A5C;
     line-height: 1.05;
@@ -72,38 +66,38 @@
     display: block;
     font-family: 'Fraunces', serif;
     font-style: italic;
-    font-size: 11px;
+    font-size: 10.5px;
     font-weight: 500;
     color: #B0432A;
-    margin-top: 2px;
+    margin-top: 1px;
   }
 
   .head-right {
     text-align: right;
-    font-size: 10px;
+    font-size: 9.5px;
     color: #777;
-    line-height: 1.6;
+    line-height: 1.55;
   }
 
   .doc-label {
     display: inline-block;
     background: #1B3A5C;
     color: #fff;
-    font-size: 10px;
+    font-size: 9.5px;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 700;
-    padding: 5px 12px;
+    padding: 4px 11px;
     border-radius: 3px;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
 
   /* ===== Title ===== */
   .doc-title {
-    font-size: 30px;
+    font-size: 24px;
     color: #1B3A5C;
     line-height: 1.1;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
   }
 
   .doc-title em { font-style: italic; color: #B0432A; }
@@ -111,36 +105,34 @@
   .intro {
     background: #FFF8E1;
     border-left: 3px solid #C9A04B;
-    padding: 11px 15px;
+    padding: 8px 13px;
     border-radius: 0 5px 5px 0;
-    font-size: 11px;
+    font-size: 10.2px;
     color: #444;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    line-height: 1.55;
+    margin-bottom: 13px;
   }
 
   .intro strong { color: #1B3A5C; }
 
   /* ===== Section ===== */
-  .sec {
-    margin-bottom: 16px;
-  }
+  .sec { margin-bottom: 10px; }
 
   .sec-head {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 11px;
+    gap: 9px;
+    margin-bottom: 7px;
   }
 
   .sec-num {
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     background: #B0432A;
     color: #fff;
     font-family: 'Fraunces', serif;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -149,7 +141,7 @@
   }
 
   .sec-title {
-    font-size: 16px;
+    font-size: 15px;
     color: #1B3A5C;
     font-weight: 600;
   }
@@ -158,16 +150,14 @@
   .grid2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 9px 26px;
+    gap: 5px 22px;
   }
 
-  .grid1 { display: block; }
-
   .field {
-    padding-top: 13px;
+    padding-top: 11px;
     border-bottom: 1px solid #9a9a9a;
-    margin-bottom: 9px;
-    min-height: 30px;
+    margin-bottom: 6px;
+    min-height: 26px;
     position: relative;
   }
 
@@ -175,35 +165,35 @@
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 9px;
+    font-size: 8.5px;
     text-transform: uppercase;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.7px;
     color: #999;
     font-weight: 600;
   }
 
-  .field.tall { min-height: 50px; }
+  .field.tall { min-height: 39px; }
 
   /* Checkboxes */
   .opts {
     display: flex;
     flex-wrap: wrap;
-    gap: 7px 18px;
-    margin-bottom: 4px;
+    gap: 5px 15px;
+    margin-bottom: 3px;
   }
 
   .opt {
     display: flex;
     align-items: center;
     gap: 6px;
-    font-size: 11.5px;
+    font-size: 10.5px;
     color: #2a2a2a;
   }
 
   .opt::before {
     content: '';
-    width: 13px;
-    height: 13px;
+    width: 12px;
+    height: 12px;
     border: 1.5px solid #1B3A5C;
     border-radius: 3px;
     flex-shrink: 0;
@@ -211,48 +201,52 @@
   }
 
   .opts-label {
-    font-size: 11px;
+    font-size: 10.3px;
     color: #1B3A5C;
     font-weight: 600;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
   }
 
   .write-line {
     border-bottom: 1px solid #9a9a9a;
-    min-height: 22px;
-    margin-bottom: 7px;
+    min-height: 18px;
+    margin-bottom: 5px;
+  }
+
+  .mini-note {
+    font-size: 9px;
+    color: #999;
+    font-style: italic;
+    margin-top: 3px;
   }
 
   /* ===== Footer ===== */
   .foot {
-    margin-top: 20px;
+    margin-top: 13px;
     background: #1B3A5C;
     color: #fff;
     border-radius: 8px;
-    padding: 18px 22px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
   }
 
-  .foot-text {
-    font-size: 11.5px;
-    line-height: 1.5;
-  }
+  .foot-text { font-size: 11px; line-height: 1.5; }
 
   .foot-text strong {
     font-family: 'Fraunces', serif;
-    font-size: 15px;
+    font-size: 14px;
     color: #C9A04B;
     display: block;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
   }
 
   .foot-contact {
     text-align: right;
-    font-size: 11px;
-    line-height: 1.7;
+    font-size: 10.5px;
+    line-height: 1.65;
     flex-shrink: 0;
   }
 
@@ -260,18 +254,11 @@
 
   .page-tag {
     position: absolute;
-    bottom: 8mm;
-    right: 16mm;
-    font-size: 9px;
+    bottom: 6mm;
+    right: 13mm;
+    font-size: 8.5px;
     color: #aaa;
     letter-spacing: 1px;
-  }
-
-  .mini-note {
-    font-size: 9.5px;
-    color: #999;
-    font-style: italic;
-    margin-top: 3px;
   }
 
   @media print {
@@ -308,7 +295,7 @@
   <h1 class="doc-title">Parlons de <em>votre projet</em> de site internet</h1>
 
   <div class="intro">
-    Cette fiche nous aide à comprendre précisément votre besoin. <strong>Remplissez-la tranquillement</strong> (à la main ou directement à l'écran), puis <strong>joignez-la à votre demande de devis</strong> par email. Plus elle est complète, plus votre devis sera précis — et rapide à recevoir. Aucune question n'est obligatoire : remplissez ce que vous pouvez.
+    Cette fiche nous aide à comprendre précisément votre besoin. <strong>Remplissez-la tranquillement</strong> (à la main ou à l'écran), puis <strong>joignez-la à votre demande de devis</strong>. Plus elle est complète, plus votre devis sera précis — et rapide à recevoir. Aucune question n'est obligatoire : remplissez ce que vous pouvez.
   </div>
 
   <!-- 01 -->
@@ -340,13 +327,13 @@
       <span class="opt">Oui, récent</span>
     </div>
     <div class="field"><span class="lab">Si oui, adresse du site actuel</span></div>
-    <div class="opts-label" style="margin-top:8px;">Avez-vous une fiche Google (Google Business Profile) ?</div>
+    <div class="opts-label" style="margin-top:7px;">Avez-vous une fiche Google (Google Business Profile) ?</div>
     <div class="opts">
       <span class="opt">Oui</span>
       <span class="opt">Non</span>
       <span class="opt">Je ne sais pas</span>
     </div>
-    <div class="opts-label" style="margin-top:8px;">Sur quels réseaux sociaux êtes-vous présent ?</div>
+    <div class="opts-label" style="margin-top:7px;">Sur quels réseaux sociaux êtes-vous présent ?</div>
     <div class="opts">
       <span class="opt">Facebook</span>
       <span class="opt">Instagram</span>
@@ -368,7 +355,7 @@
       <span class="opt">Présenter mes services / réalisations</span>
       <span class="opt">Avoir l'air professionnel</span>
     </div>
-    <div class="opts" style="margin-top:4px;">
+    <div class="opts" style="margin-top:3px;">
       <span class="opt">Être contacté plus facilement</span>
       <span class="opt">Permettre la prise de rendez-vous</span>
       <span class="opt">Concurrencer mes concurrents</span>
@@ -405,7 +392,7 @@
         </div>
       </div>
     </div>
-    <div class="opts-label" style="margin-top:8px;">Et les textes (descriptions, services) ?</div>
+    <div class="opts-label" style="margin-top:7px;">Et les textes (descriptions, services) ?</div>
     <div class="opts">
       <span class="opt">Je les fournis moi-même</span>
       <span class="opt">À rédiger ensemble</span>
@@ -464,15 +451,15 @@
       <div class="sec-title">La formule envisagée</div>
     </div>
     <div class="opts-label">Quelle formule vous intéresse le plus ?</div>
-    <div class="opts" style="gap:9px 18px;">
+    <div class="opts" style="gap:7px 16px;">
       <span class="opt">Création seule — 300 € (paiement unique)</span>
       <span class="opt">Création + Essentiel — 300 € puis 35 €/mois</span>
     </div>
-    <div class="opts" style="gap:9px 18px; margin-top:5px;">
+    <div class="opts" style="gap:7px 16px; margin-top:4px;">
       <span class="opt">Création + Pro — 300 € puis 59 €/mois</span>
       <span class="opt">Je ne sais pas encore — conseillez-moi</span>
     </div>
-    <div class="mini-note">Le suivi mensuel (Essentiel ou Pro) est optionnel : hébergement, maintenance, modifications et référencement inclus.</div>
+    <div class="mini-note">Le suivi mensuel (Essentiel ou Pro) est optionnel : hébergement, maintenance, modifications et référencement (SEO + GEO) inclus.</div>
   </div>
 
   <!-- 07 -->
