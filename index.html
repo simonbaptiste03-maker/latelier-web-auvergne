@@ -1445,6 +1445,110 @@
     margin-top: 3px;
   }
 
+  /* ===== BLOC MARCHÉ (section Pourquoi nous choisir) ===== */
+  .market {
+    margin-top: 56px;
+    padding-top: 50px;
+    border-top: 1px solid var(--line);
+  }
+  .market-head { text-align: center; margin-bottom: 34px; }
+  .market-head .lab {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--terra);
+    font-weight: 600;
+  }
+  .market-head h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 34px;
+    color: var(--ink);
+    margin-top: 10px;
+    line-height: 1.1;
+  }
+  .market-head h3 em { font-style: italic; color: var(--terra); }
+  .market-grid {
+    display: grid;
+    grid-template-columns: 1.12fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .market-map {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px;
+  }
+  .market-map svg { width: 100%; height: auto; display: block; }
+  .market-figs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .market-fig {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 17px 12px;
+    text-align: center;
+  }
+  .market-fig .v {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1;
+  }
+  .market-fig .k {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--ink-mute);
+    font-weight: 600;
+    margin-top: 5px;
+  }
+  .market-conc {
+    background: var(--navy);
+    border-radius: 10px;
+    padding: 22px 24px;
+    color: var(--bg);
+  }
+  .market-conc h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    color: var(--gold);
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .market-conc-row { display: flex; gap: 12px; }
+  .market-conc-item {
+    flex: 1;
+    text-align: center;
+    background: rgba(255,255,255,0.06);
+    border-radius: 7px;
+    padding: 13px 6px;
+  }
+  .market-conc-item .cv {
+    font-family: 'Fraunces', serif;
+    font-size: 23px;
+    color: var(--gold);
+    font-weight: 600;
+    line-height: 1;
+  }
+  .market-conc-item .ck {
+    font-size: 9.5px;
+    color: rgba(250,248,244,0.7);
+    margin-top: 5px;
+    line-height: 1.35;
+  }
+  .market-conc p {
+    font-size: 12.5px;
+    color: rgba(250,248,244,0.82);
+    margin-top: 14px;
+    line-height: 1.6;
+  }
+
   /* ===== MONDES — signature couleur par section ===== */
 
   /* Trait coloré signature devant chaque intitulé */
@@ -1627,6 +1731,7 @@
     .section-title { font-size: 36px; }
     .hero-card-main { width: 320px; }
     .ref-band { grid-template-columns: 1fr; gap: 34px; padding: 38px 32px; }
+    .market-grid { grid-template-columns: 1fr; gap: 30px; }
   }
 
   @media (max-width: 640px) {
@@ -2086,6 +2191,95 @@
       </ul>
 
     </div>
+
+    <!-- ===== BLOC MARCHÉ ===== -->
+    <div class="market">
+      <div class="market-head">
+        <span class="lab">Le terrain</span>
+        <h3>Le bassin clermontois, <em>votre marché</em></h3>
+      </div>
+      <div class="market-grid">
+        <div class="market-map">
+          <svg viewBox="0 0 640 410" xmlns="http://www.w3.org/2000/svg" aria-label="Croquis du bassin clermontois">
+            <path d="M150,140 Q200,70 320,72 Q450,74 500,130 Q545,180 510,270 Q470,355 330,360 Q190,358 140,280 Q105,205 150,140 Z" fill="#1B3A5C" fill-opacity="0.05" stroke="#1B3A5C" stroke-opacity="0.25" stroke-width="1.4" stroke-dasharray="2 4"/>
+            <path d="M505,55 Q525,130 500,200 Q478,265 505,360" fill="none" stroke="#2E5C8A" stroke-opacity="0.5" stroke-width="2.6" stroke-linecap="round"/>
+            <text x="512" y="120" font-family="Geist, sans-serif" font-size="9" fill="#2E5C8A" font-style="italic" opacity="0.7">l'Allier</text>
+            <g>
+              <path d="M70,180 L92,118 L114,180 Z" fill="#B0432A" fill-opacity="0.8"/>
+              <circle cx="92" cy="115" r="3" fill="#C9A04B"/>
+              <path d="M52,232 L70,190 L88,232 Z" fill="#B0432A" fill-opacity="0.62"/>
+              <path d="M88,250 L108,196 L128,250 Z" fill="#B0432A" fill-opacity="0.72"/>
+              <circle cx="108" cy="193" r="2.6" fill="#C9A04B"/>
+              <path d="M58,310 L78,258 L98,310 Z" fill="#B0432A" fill-opacity="0.6"/>
+              <path d="M92,322 L114,270 L136,322 Z" fill="#B0432A" fill-opacity="0.7"/>
+              <text x="58" y="350" font-family="Fraunces, serif" font-size="11" font-style="italic" fill="#B0432A">Chaîne des Puys</text>
+            </g>
+            <circle cx="312" cy="232" r="62" fill="none" stroke="#C9A04B" stroke-width="1" stroke-dasharray="3 4" opacity="0.7"/>
+            <circle cx="312" cy="232" r="124" fill="none" stroke="#C9A04B" stroke-width="1" stroke-dasharray="3 4" opacity="0.55"/>
+            <text x="312" y="178" font-family="Geist, sans-serif" font-size="8" fill="#B58A2E" text-anchor="middle">5 km</text>
+            <text x="312" y="116" font-family="Geist, sans-serif" font-size="8" fill="#B58A2E" text-anchor="middle">10 km</text>
+            <g font-family="Geist, sans-serif" font-size="8.5" fill="#3A3A4A">
+              <circle cx="284" cy="222" r="3" fill="#1B3A5C"/><text x="278" y="213" text-anchor="end">Chamalières</text>
+              <circle cx="272" cy="258" r="3" fill="#1B3A5C"/><text x="266" y="262" text-anchor="end">Royat</text>
+              <circle cx="296" cy="196" r="3" fill="#1B3A5C"/><text x="290" y="190" text-anchor="end">Durtol</text>
+              <circle cx="222" cy="226" r="3" fill="#1B3A5C"/><text x="216" y="222" text-anchor="end">Orcines</text>
+              <circle cx="316" cy="288" r="3" fill="#1B3A5C"/><text x="320" y="299" text-anchor="start">Beaumont</text>
+              <circle cx="288" cy="306" r="3" fill="#1B3A5C"/><text x="282" y="316" text-anchor="end">Ceyrat</text>
+              <circle cx="330" cy="312" r="3" fill="#1B3A5C"/><text x="336" y="320" text-anchor="start">Romagnat</text>
+              <circle cx="350" cy="270" r="3" fill="#1B3A5C"/><text x="356" y="266" text-anchor="start">Aubière</text>
+              <circle cx="392" cy="296" r="3" fill="#1B3A5C"/><text x="398" y="300" text-anchor="start">Cournon-d'Auvergne</text>
+              <circle cx="362" cy="234" r="3" fill="#1B3A5C"/><text x="366" y="228" text-anchor="start">Aulnat</text>
+              <circle cx="402" cy="248" r="3" fill="#1B3A5C"/><text x="408" y="252" text-anchor="start">Lempdes</text>
+              <circle cx="448" cy="226" r="3" fill="#1B3A5C"/><text x="454" y="222" text-anchor="start">Pont-du-Château</text>
+              <circle cx="338" cy="170" r="3" fill="#1B3A5C"/><text x="344" y="166" text-anchor="start">Gerzat</text>
+              <circle cx="306" cy="158" r="3" fill="#1B3A5C"/><text x="300" y="152" text-anchor="end">Cébazat</text>
+              <circle cx="278" cy="172" r="2.6" fill="#1B3A5C" opacity="0.7"/>
+              <circle cx="322" cy="126" r="2.6" fill="#1B3A5C" opacity="0.7"/>
+              <circle cx="238" cy="296" r="2.6" fill="#1B3A5C" opacity="0.7"/>
+              <circle cx="368" cy="312" r="2.6" fill="#1B3A5C" opacity="0.7"/>
+            </g>
+            <path d="M312,232 m0,-13 l3.3,8.4 l9,0.5 l-7,5.8 l2.4,8.7 l-7.7,-4.8 l-7.7,4.8 l2.4,-8.7 l-7,-5.8 l9,-0.5 Z" fill="#C9A04B" stroke="#B0432A" stroke-width="1"/>
+            <text x="312" y="256" font-family="Fraunces, serif" font-size="12.5" font-weight="700" fill="#1B3A5C" text-anchor="middle">CLERMONT-FERRAND</text>
+            <circle cx="330" cy="74" r="3.4" fill="#B0432A"/>
+            <text x="338" y="71" font-family="Geist, sans-serif" font-size="8.5" fill="#B0432A" font-weight="600">Riom · 15 km</text>
+            <line x1="312" y1="372" x2="312" y2="396" stroke="#B0432A" stroke-width="1.6"/>
+            <path d="M312,400 l-4,-7 l8,0 Z" fill="#B0432A"/>
+            <text x="322" y="394" font-family="Geist, sans-serif" font-size="8.5" fill="#B0432A" font-weight="600">Issoire · 36 km</text>
+            <g transform="translate(596,52)">
+              <circle r="17" fill="#fff" stroke="#1B3A5C" stroke-width="1"/>
+              <path d="M0,-13 L4,2 L0,-2 L-4,2 Z" fill="#B0432A"/>
+              <text x="0" y="-19" font-family="Geist, sans-serif" font-size="9" font-weight="700" fill="#1B3A5C" text-anchor="middle">N</text>
+            </g>
+            <g transform="translate(40,388)">
+              <line x1="0" y1="0" x2="62" y2="0" stroke="#1B3A5C" stroke-width="2"/>
+              <line x1="0" y1="-3" x2="0" y2="3" stroke="#1B3A5C" stroke-width="2"/>
+              <line x1="31" y1="-3" x2="31" y2="3" stroke="#1B3A5C" stroke-width="1.4"/>
+              <line x1="62" y1="-3" x2="62" y2="3" stroke="#1B3A5C" stroke-width="2"/>
+              <text x="0" y="14" font-family="Geist, sans-serif" font-size="8" fill="#5A5A6B">0</text>
+              <text x="62" y="14" font-family="Geist, sans-serif" font-size="8" fill="#5A5A6B" text-anchor="middle">5 km</text>
+            </g>
+          </svg>
+        </div>
+        <div class="market-data">
+          <div class="market-figs">
+            <div class="market-fig"><div class="v">21</div><div class="k">communes</div></div>
+            <div class="market-fig"><div class="v">300 km²</div><div class="k">de superficie</div></div>
+            <div class="market-fig"><div class="v">295 000</div><div class="k">habitants</div></div>
+            <div class="market-fig"><div class="v">~10 km</div><div class="k">rayon du cœur</div></div>
+          </div>
+          <div class="market-conc">
+            <h4>Vos concurrents sur le web</h4>
+            <div class="market-conc-row">
+              <div class="market-conc-item"><div class="cv">~40</div><div class="ck">agences référencées</div></div>
+              <div class="market-conc-item"><div class="cv">100-200</div><div class="ck">freelances (estim.)</div></div>
+              <div class="market-conc-item"><div class="cv">≈ 5</div><div class="ck">ciblent les artisans</div></div>
+            </div>
+            <p>Le marché paraît encombré — mais presque personne ne cible les artisans avec une offre sans frais de création. C'est précisément l'espace que nous occupons.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -2261,7 +2455,7 @@
 <script>
   /* ===== Apparition élégante au défilement ===== */
   (function () {
-    var sel = '.section-eyebrow, .section-title, .section-lead, .diag-callout, .about-quote, .about-text, .about-meta, .service-card, .ref-band, .step-badge, .step-creation, .pricing-plus, .sub-card, .pricing-summary, .why-comparison, .why-list li, .process-step, .faq-item, .contact-form, .contact-info';
+    var sel = '.section-eyebrow, .section-title, .section-lead, .diag-callout, .about-quote, .about-text, .about-meta, .service-card, .ref-band, .step-badge, .step-creation, .pricing-plus, .sub-card, .pricing-summary, .why-comparison, .why-list li, .market-head, .market-map, .market-data, .process-step, .faq-item, .contact-form, .contact-info';
     var els = Array.prototype.slice.call(document.querySelectorAll(sel));
     els.forEach(function (el) { el.classList.add('fx-reveal'); });
 
