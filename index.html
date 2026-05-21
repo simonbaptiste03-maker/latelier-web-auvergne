@@ -250,6 +250,8 @@
     grid-template-columns: 1.2fr 1fr;
     gap: 80px;
     align-items: center;
+    position: relative;
+    z-index: 1;
   }
 
   .hero-eyebrow {
@@ -1184,6 +1186,13 @@
   section.contact {
     background: var(--navy);
     color: var(--bg);
+    position: relative;
+    overflow: hidden;
+  }
+
+  section.contact .container {
+    position: relative;
+    z-index: 1;
   }
 
   section.contact .section-eyebrow { color: var(--gold); }
@@ -1317,6 +1326,70 @@
 
   footer .links a:hover { color: var(--gold); }
 
+  /* ===== EFFETS VISUELS ===== */
+
+  /* Lueur dorée douce dans le hero */
+  section.hero::before {
+    content: '';
+    position: absolute;
+    top: -220px;
+    right: -160px;
+    width: 620px;
+    height: 620px;
+    background: radial-gradient(circle, rgba(201,160,75,0.13) 0%, rgba(201,160,75,0) 68%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Silhouettes du Puy-de-Dôme */
+  .hero-mountains,
+  .contact-mountains {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    pointer-events: none;
+    line-height: 0;
+  }
+
+  /* Apparition au défilement */
+  .fx-reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .fx-reveal.fx-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Entrée animée du hero au chargement */
+  @keyframes fxRise {
+    from { opacity: 0; transform: translateY(34px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-text > * {
+    animation: fxRise 0.9s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  }
+  .hero-eyebrow { animation-delay: 0.10s; }
+  .hero h1      { animation-delay: 0.20s; }
+  .hero .lead   { animation-delay: 0.36s; }
+  .hero-actions { animation-delay: 0.48s; }
+  .hero-stats   { animation-delay: 0.58s; }
+  .hero-visual {
+    animation: fxRise 1s cubic-bezier(0.16, 1, 0.3, 1) 0.42s backwards;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fx-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    .hero-text > *, .hero-visual { animation: none !important; }
+  }
+
   /* ===== MOBILE ===== */
   @media (max-width: 1024px) {
     .hero-inner, .about-grid, .why-grid, .contact-grid { grid-template-columns: 1fr; gap: 50px; }
@@ -1387,6 +1460,10 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero">
+  <svg class="hero-mountains" viewBox="0 0 1440 280" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path fill="#1B3A5C" fill-opacity="0.045" d="M0,280 L0,210 C160,200 300,196 430,205 C560,214 640,150 800,150 C960,150 1080,205 1240,200 C1340,197 1400,205 1440,208 L1440,280 Z"/>
+    <path fill="#1B3A5C" fill-opacity="0.09" d="M0,280 L0,238 C90,235 150,230 210,234 C262,237 296,210 352,212 C398,214 422,225 462,216 C506,150 566,96 650,82 C732,69 802,98 854,156 C894,200 930,214 982,215 C1026,216 1062,202 1097,182 C1140,142 1198,122 1254,162 C1302,196 1350,214 1406,230 C1424,235 1434,236 1440,237 L1440,280 Z"/>
+  </svg>
   <div class="container hero-inner">
     <div class="hero-text">
       <span class="hero-eyebrow">Création de sites internet · Auvergne</span>
@@ -1394,7 +1471,7 @@
       <p class="lead">Site vitrine professionnel à partir de <strong>300 €</strong> ou abonnement tout compris dès <strong>35 €/mois</strong>. Hébergement, maintenance et référencement Google inclus. Pour les artisans, commerçants et TPE d'Auvergne qui veulent être trouvés sur internet sans casser leur trésorerie.</p>
       <div class="hero-actions">
         <a href="#tarifs" class="cta">Voir les tarifs</a>
-        <a href="#contact" class="cta cta-outline">Audit gratuit en visio</a>
+        <a href="#contact" class="cta cta-outline">Audit gratuit</a>
       </div>
       <div class="hero-stats">
         <div class="hero-stat">
@@ -1628,22 +1705,18 @@
         <tr>
           <td>Création seule (sans suivi mensuel)</td>
           <td><strong>300 €</strong> la 1ʳᵉ année</td>
-          <td>puis ≈ 85 €/an pour vos renouvellements</td>
         </tr>
         <tr>
           <td>Création + Essentiel</td>
           <td><strong>720 €</strong> la 1ʳᵉ année</td>
-          <td>(300 € création + 35 € × 12 mois)</td>
         </tr>
         <tr>
           <td>Création + Pro</td>
           <td><strong>1 008 €</strong> la 1ʳᵉ année</td>
-          <td>(300 € création + 59 € × 12 mois)</td>
         </tr>
         <tr class="compare">
           <td>Une agence classique équivalente</td>
           <td><strong>≈ 5 500 €</strong> la 1ʳᵉ année</td>
-          <td>+ maintenance facturée à part</td>
         </tr>
       </table>
     </div>
@@ -1806,6 +1879,10 @@
 
 <!-- ============ CONTACT ============ -->
 <section id="contact" class="contact">
+  <svg class="contact-mountains" viewBox="0 0 1440 220" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path fill="#FAF8F4" fill-opacity="0.035" d="M0,220 L0,170 C170,162 300,158 440,165 C580,172 660,120 820,122 C960,124 1080,165 1240,160 C1340,157 1400,163 1440,165 L1440,220 Z"/>
+    <path fill="#C9A04B" fill-opacity="0.08" d="M0,220 L0,192 C100,189 170,185 240,188 C300,190 340,168 410,170 C470,172 500,182 545,176 C592,118 662,80 742,72 C822,80 882,120 926,170 C966,200 1010,205 1060,200 C1120,194 1180,150 1252,178 C1312,200 1372,208 1440,210 L1440,220 Z"/>
+  </svg>
   <div class="container">
     <span class="section-eyebrow">Parlons de votre projet</span>
     <h2 class="section-title">Un projet de <em>site internet</em> en Auvergne ?</h2>
@@ -1898,6 +1975,37 @@
 </footer>
 
 <script>
+  /* ===== Apparition élégante au défilement ===== */
+  (function () {
+    var sel = '.section-eyebrow, .section-title, .section-lead, .about-quote, .about-text, .about-meta, .service-card, .step-badge, .step-creation, .pricing-plus, .sub-card, .pricing-summary, .why-comparison, .why-list li, .process-step, .faq-item, .contact-form, .contact-info';
+    var els = Array.prototype.slice.call(document.querySelectorAll(sel));
+    els.forEach(function (el) { el.classList.add('fx-reveal'); });
+
+    ['.services-grid', '.sub-grid', '.process-grid', '.faq-grid', '.why-list'].forEach(function (gs) {
+      var grid = document.querySelector(gs);
+      if (!grid) return;
+      Array.prototype.forEach.call(grid.children, function (child, i) {
+        if (child.classList.contains('fx-reveal')) {
+          child.style.transitionDelay = (i * 0.09) + 's';
+        }
+      });
+    });
+
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('fx-in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('fx-in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+
   function sendContact(e) {
     e.preventDefault();
     const f = e.target;
