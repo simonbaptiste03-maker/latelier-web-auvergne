@@ -20,3 +20,8 @@ node_modules/
 .env
 .env.local
 .env*.local
+
+# cache des polices (regenere par build.py)
+depliant/.fonts-cache/
+__pycache__/
+*.pyc
